@@ -1,0 +1,220 @@
+*
+
+{
+   margin:0;
+   padding:0;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   text-align: center;
+   
+   
+}
+
+h1{
+    position: absolute;
+    font-family: cursive;
+    color: beige;
+    top: 5%;
+    
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    background: rgb(5, 5, 31);
+    background: -webkit-linear-gradient(bottom left,blue,rgb(140, 0, 255));
+}
+.container{
+    position: relative;
+    top: 0%;
+}
+
+.container .card{
+    top: 100px;
+    position: relative;
+    height: 450px;
+    width: 320px;
+    background: rgb(20, 168, 226);
+    border-radius: 10px;
+    overflow: hidden;
+    
+
+}
+.container .card:before{
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgb(39, 50, 197);
+
+    clip-path: circle(180px at 80% 20%);
+    transition: 1.5s; 
+}
+
+
+
+.container .card:hover:before{
+    clip-path: circle(300px at 80% -20%);
+}
+.container .card:after {
+    content: 'AUGUST WATCH';
+    position: absolute;
+    top: 60%;
+    left: 7%;
+    font-size: 4em;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(96, 240, 240, 0.144);
+    
+}
+.container .card .imgbox {
+    position:relative;
+    top: 30%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    width: 220px;
+    transition: 0.5s;
+    left: 10%;
+}
+.container .card:hover .imgbox{
+    top: 0%;
+    transform: translateY(0%);
+}
+.container .card:hover .imgbox img {
+    position: absolute;
+    top: 120px;
+    left: 150px;
+    transform: translate(-50%, -50%) rotate(-25deg);
+    width: 270px;
+
+}
+.container .card:hover .contentbox{
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: 2s;
+    z-index: 10;
+}
+.container .card:hover .contentbox{
+    height: 210px;
+}
+.container .card .contentbox h2{
+    position: relative;
+
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: rgb(255, 248, 248);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+.container .card .contentbox .size,
+.container .card .contentbox .color
+{
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.container .card .contentbox .size h3{
+    color: darkorange;
+    font-weight: 300;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 10px;
+    
+}
+
+.container .card:hover .contentbox .size{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.5s;
+}
+
+.container .card:hover .contentbox .color{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.6s;
+}
+
+.container .card:hover .contentbox .size h3,
+.container .card:hover .contentbox .color h3{
+    color: darkorange;
+    font-weight: 300;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 10px;
+}
+.container .card .contentbox .size span {
+    
+    height: 26px;
+    width: 26px;
+    
+    text-align: center;
+    line-height: 26px;
+    font-size: 14px;
+    display: inline-block;
+    color: rgb(7, 0, 10);
+    background:#fff;
+    margin: 0 5px;
+    transition: 0.5s;
+    color: rgb(2, 12, 12);
+    border-radius: 3px;
+    opacity: 0px;
+    cursor: pointer;
+}
+.container .card .contentbox .size span:hover{
+    background: rgb(245, 19, 19);
+    opacity: 0px;
+}
+
+.container .card .contentbox .color span{
+    width: 20px;
+    height: 20px;
+    background:#ff0;
+    border-radius: 50px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+.container .card .contentbox .color span:nth-child(2) {
+    background: rgb(0, 0, 0);
+}
+.container .card .contentbox .color span:nth-child(3){
+    background: rgb(178, 26, 248);
+}
+.container .card .contentbox .color span:nth-child(4){
+    background: rgb(207, 122, 17);
+}
+.container .card .contentbox a{
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 3px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: 1.5s;
+    color: rgb(26, 15, 15);
+    background: rgb(243, 137, 17);
+    
+}
+.container .card:hover .contentbox a{
+    opacity: 1;
+    transform: translateY(0px);
+    transition-delay: 0.75s;
+   position: absolute;
+   top: 50%;
+   
+}
